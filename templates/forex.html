@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<form action="/convert">
+    <div class="choice">
+        <label>Convert from:</label>
+        <select name="convert_from" class="form-select" aria-label="Default select example">
+            <option value="-">-</option>
+            {% for currency in currencies %}
+            <option value="{{currency}}">{{currency}}</option>
+            {% endfor %}
+        </select>
+    </div>
+    <div class="choice">
+        <label>Convert to:</label>
+        <select name="convert_to" class="form-select" aria-label="Default select example">
+            <option value="-">-</option>
+            {% for currency in currencies %}
+            <option value="{{currency}}">{{currency}}</option>
+            {% endfor %}
+        </select>
+    </div>
+    <div class="value">
+        <label for="amount">Amount:</label>
+        <input type="text" id="amount" name="amount" placeholder="enter amount">
+    </div>
+    <div class="button">
+        <button class="btn btn-primary">Convert</button>
+    </div>
+</form>
+{% if result %}
+<div class="alert alert-success" role="alert">{{result}}</div>
+{% endif %}
+{% with messages = get_flashed_messages() %}
+{% if messages %}
+<div class="alert alert-danger" role="alert">
+    <ul>
+        {% for message in messages %}
+        <li>{{message}}</li>
+        {% endfor %}
+    </ul>
+</div>
+{% endif %}
+{% endwith %}
+{% endblock %}

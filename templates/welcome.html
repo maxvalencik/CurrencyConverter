@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Welcome to our Currency Converter</h1>
+<p>The MicroPyramid API is working again! For some currencies, you will see the following error:</p>
+<p class="error">forex_python.converter.DecimalFloatMismatchError</p>
+<p>If you see this error, just use different currencies and proceed.</p>
+
+<form class="button" action="/forex">
+    <button class="btn btn-primary">Start!</button>
+</form>
+
+{% endblock %}

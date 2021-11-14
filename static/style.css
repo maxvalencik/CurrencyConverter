@@ -1,0 +1,45 @@
+
+
+body{
+    display: flex;
+    align-items:  center;
+    flex-direction: column;
+}
+
+.button{
+    text-align: center;
+    margin-top: 15px;
+}
+
+.container-sm{
+    width: 500px;
+}
+
+label{
+    margin-right: 5px;
+}
+
+.navbar{
+    width: 500px;
+}
+
+.alert{
+    margin:10px;
+}
+
+.alert-success{
+    text-align: center;
+}
+
+h1{
+    font-size: 25px;
+    text-align: center;
+}
+
+.error{
+    color: red;
+    text-align: center;
+}
+
+
+
