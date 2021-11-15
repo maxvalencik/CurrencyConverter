@@ -5,10 +5,10 @@ from functions import Currency, currencies, convertion, symbol
 
 app = Flask(__name__)
 app.secret_key = "nerea"
-# the toolbar is only enabled in debug mode:
-app.debug = True
-toolbar = DebugToolbarExtension(app)
-app.config['DEBUG_TB_INTERCEPT_REDIRECTS'] = False
+# # the toolbar is only enabled in debug mode:
+# app.debug = True
+# toolbar = DebugToolbarExtension(app)
+# app.config['DEBUG_TB_INTERCEPT_REDIRECTS'] = False
 
 
 @app.route('/')
@@ -47,6 +47,7 @@ def convert():
 
 @app.route('/forex')
 def show_forex():
+    """Shows the forex page with form to initiate convertion and show final results when converted"""
 
     currency_available = currencies
     if session['result']:
