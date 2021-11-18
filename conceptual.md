@@ -22,7 +22,7 @@ _**A test that verifies that all the units/functions work well together.**_
 
 - What is the role of web application framework, like Flask?
 
-_**Support the development of web applications.**_ //add more details
+_**Support the development of web applications. Framework like flask handle a lot of the behind-the-scene activity that a developper would have to code for the application to work, like the routes and communication with the server.**_ 
  
 - You can pass information to Flask either as a parameter in a route URL
   (like '/foods/pretzel') or using a URL query param (like
